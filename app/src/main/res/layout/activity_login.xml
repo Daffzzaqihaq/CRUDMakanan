@@ -11,6 +11,8 @@
     android:gravity="center">
 
     <TextView
+        android:singleLine="true"
+        android:maxLines="1"
         android:id="@+id/txt_judul"
         android:fontFamily="serif-monospace"
         android:textSize="50dp"
@@ -21,6 +23,8 @@
         android:layout_height="wrap_content" />
 
     <EditText
+        android:singleLine="true"
+        android:maxLines="1"
         android:id="@+id/edt_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
