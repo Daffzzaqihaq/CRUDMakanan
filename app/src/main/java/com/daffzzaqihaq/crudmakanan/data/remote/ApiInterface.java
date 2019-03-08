@@ -30,4 +30,15 @@ public interface ApiInterface {
                                      @Field("level")String level
                                      );
 
+    // Membuat endpoint untuk update
+    @FormUrlEncoded
+    @POST("updateuser.php")
+    Call<LoginResponse> updateUser(
+            @Field("iduser")int iduser,
+            @Field("namauser")String namauser,
+            @Field("alamat")String alamat,
+            @Field("jenkel")String jenkel,
+            @Field("notelp")String notelp
+    );
+
 }

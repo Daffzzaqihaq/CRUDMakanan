@@ -67,9 +67,9 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
         }
 
         if (radioLaki.isChecked()){
-            jenkel = "Laki-laki";
+            jenkel = "L";
         }else {
-            jenkel =  "Perempuan";
+            jenkel =  "P";
         }
     }
 
@@ -105,10 +105,10 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.radioLaki:
-                jenkel = "Laki-laki";
+                jenkel = "L";
                 break;
             case R.id.radioPerempuan:
-                jenkel = "Perempuan";
+                jenkel = "P";
                 break;
             case R.id.radioAdmin:
                 level = "1";

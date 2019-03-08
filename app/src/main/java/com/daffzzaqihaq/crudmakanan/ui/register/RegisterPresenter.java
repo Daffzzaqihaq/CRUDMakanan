@@ -14,7 +14,7 @@ public class RegisterPresenter implements RegisterContract.Presenter {
     private final RegisterContract.View view;
     private ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);
 
-    public RegisterPresenter(RegisterContract.View view) {
+    public RegisterPresenter(RegisterContract.View view)  {
         this.view = view;
     }
 
