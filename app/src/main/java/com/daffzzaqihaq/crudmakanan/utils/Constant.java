@@ -1,7 +1,7 @@
 package com.daffzzaqihaq.crudmakanan.utils;
 
 public class Constant {
-    public static String BASE_URL = "http://192.168.70.41/makanan/";
+    public static String BASE_URL = "http://192.168.56.1/makanan/";
     public static String KEY_LOGIN = "KEY_LOGIN";
 
     // KEY UNTUK SHARED PREFERENCE
@@ -14,4 +14,8 @@ public class Constant {
     public static String KEY_USER_NOTELP = "KEY_USER_NOTELP";
     public static String KEY_USER_USERNAME = "KEY_USER_USERNAME";
     public static String KEY_USER_LEVEL = "KEY_USER_LEVEL";
+    public static int STORAGE_PERMISSION_CODE = 1;
+    public static int REQUEST_CODE = 2;
+    public static String KEY_EXTRA_ID_MAKANAN = "KEY_EXTRA_ID_MAKANAN";
+    public static String KEY_EXTRA_ID_CATEGORY = "KEY_EXTRA_ID_CATEGORY";
 }

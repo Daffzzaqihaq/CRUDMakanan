@@ -100,7 +100,7 @@ public class ProfilePresenter implements ProfileContract.Presenter {
         // Membuat object model logindata untuk penampung
         LoginData loginData = new LoginData();
 
-        // Memasukan dat SharedPreference ke dalam model logindata
+        // Memasukan data SharedPreference ke dalam model logindata
         loginData.setId_user(pref.getString(Constant.KEY_USER_ID, ""));
         loginData.setNama_user(pref.getString(Constant.KEY_USER_NAMA, ""));
         loginData.setAlamat(pref.getString(Constant.KEY_USER_ALAMAT, ""));

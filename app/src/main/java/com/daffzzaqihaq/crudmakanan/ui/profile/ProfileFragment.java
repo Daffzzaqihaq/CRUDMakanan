@@ -81,7 +81,6 @@ public class ProfileFragment extends Fragment implements ProfileContract.View {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -92,6 +91,7 @@ public class ProfileFragment extends Fragment implements ProfileContract.View {
         setHasOptionsMenu(true);
         // Mensetting spinner
         setupSpinner();
+
 
         // Mengambil data yg dikerjakan oleh presenter
         mProfilePresenter.getDataUser(getContext());
@@ -208,7 +208,6 @@ public class ProfileFragment extends Fragment implements ProfileContract.View {
         inflater.inflate(R.menu.menu_editor, menu);
         action = menu;
         action.findItem(R.id.menu_save).setVisible(false);
-
         super.onCreateOptionsMenu(menu, inflater);
     }
 

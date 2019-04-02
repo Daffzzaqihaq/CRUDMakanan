@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.daffzzaqihaq.crudmakanan.R;
 import com.daffzzaqihaq.crudmakanan.ui.favorite.FavoriteFragment;
 import com.daffzzaqihaq.crudmakanan.ui.makanan.MakananFragment;
+import com.daffzzaqihaq.crudmakanan.ui.makananbyuser.MakananByUser;
 import com.daffzzaqihaq.crudmakanan.ui.profile.ProfileFragment;
 
 import butterknife.BindView;
@@ -38,12 +39,14 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_makanan:
+                    getSupportActionBar().setTitle("Makanan");
                     MakananFragment makananFragment = new MakananFragment();
                     loadFragment(makananFragment);
                     return true;
-                case R.id.navigation_favorite:
-                    FavoriteFragment favoriteFragment = new FavoriteFragment();
-                    loadFragment(favoriteFragment);
+                case R.id.navigation_kelola_makanan:
+                    getSupportActionBar().setTitle("Kelola Makanan");
+                    MakananByUser makananByUser = new MakananByUser();
+                    loadFragment(makananByUser);
                     return true;
                 case R.id.navigation_profile:
                     ProfileFragment profileFragment = new ProfileFragment();
