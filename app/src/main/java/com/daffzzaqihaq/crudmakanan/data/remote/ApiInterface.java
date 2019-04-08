@@ -86,4 +86,24 @@ public interface ApiInterface {
     @GET("getmakananbyuser.php")
     Call<MakananResponse> getMakananByUser(@Query("id_user") int idUser);
 
+    // Delete Makanan
+    @POST("deletemakanan.php")
+    Call<MakananResponse> deleteMakanan(
+            @Field("idmakanan") int idMakanan,
+            @Field("fotomakanan") String namaFotoMakanan
+    );
+
+    // Mengupdate makanan
+    @Multipart
+    @POST("updatemakanan.php")
+    Call<MakananResponse> updateMakanan(
+            @Part("idmakanan") int idMakanan,
+            @Part("idkategori") int idCategory,
+            @Part("namamakanan") RequestBody namaMakanan,
+            @Part("descmakanan") RequestBody descMakanan,
+            @Part("fotomakanan") RequestBody fotoMakanan,
+            @Part("inserttime") RequestBody insertTime,
+            @Part MultipartBody.Part image
+    );
+
 }

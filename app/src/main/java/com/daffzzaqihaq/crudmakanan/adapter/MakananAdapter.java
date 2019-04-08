@@ -189,7 +189,7 @@ public class MakananAdapter extends RecyclerView.Adapter<MakananAdapter.ViewHold
                     @Override
                     public void onClick(View v) {
                         // Berpindah halaman ke detail makanan
-                        context.startActivity(new Intent(context, DetailMakananByUserActivity.class).putExtra(Constant.KEY_EXTRA_ID_MAKANAN, makananData.getIdKategori()));
+                        context.startActivity(new Intent(context, DetailMakananByUserActivity.class).putExtra(Constant.KEY_EXTRA_ID_MAKANAN, makananData.getIdMakanan()));
                     }
                 });
 
@@ -204,10 +204,11 @@ public class MakananAdapter extends RecyclerView.Adapter<MakananAdapter.ViewHold
         // Membuat penampung date dengan format yang baru
         String newDate = insertTime;
 
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
         // Mengubah tanggal yg dimiliki menjadi tipe date
         try {
             //Membuat format sesuai dengan tanggal yg sudah dimiliki
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             date = sdf.parse(insertTime);
         } catch (ParseException e) {
             e.printStackTrace();
@@ -286,7 +287,7 @@ public class MakananAdapter extends RecyclerView.Adapter<MakananAdapter.ViewHold
         }
     }
 
-    private class FoodByUserViewHolder extends ViewHolder {
+    public class FoodByUserViewHolder extends ViewHolder {
         @BindView(R.id.img_makanan)
         ImageView imgMakanan;
         @BindView(R.id.txt_title)

@@ -56,6 +56,10 @@ public class MakananByUser extends Fragment implements MakananByUserContract.Vie
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_makanan_by_user, container, false);
+        unbinder = ButterKnife.bind(this, view);
+
         // Mengambil id User dari sharedpref
         SharedPreferences pref = getContext().getSharedPreferences(Constant.pref_name, 0);
 
@@ -75,10 +79,6 @@ public class MakananByUser extends Fragment implements MakananByUserContract.Vie
             }
         });
 
-
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_makanan_by_user, container, false);
-        unbinder = ButterKnife.bind(this, view);
         return view;
     }
 
