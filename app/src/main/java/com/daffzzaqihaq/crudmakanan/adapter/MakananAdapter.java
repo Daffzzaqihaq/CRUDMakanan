@@ -53,6 +53,7 @@ public class MakananAdapter extends RecyclerView.Adapter<MakananAdapter.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        //numpang mang
         View view;
         switch (i) {
             case TYPE_1:
